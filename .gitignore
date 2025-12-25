@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+
+# ===============================
+# PyCharm
+# ===============================
+# IDE-specific folders
+.idea/
+
+# Ignore workspace files (they store user-specific settings)
+*.iml
+*.iws
+
