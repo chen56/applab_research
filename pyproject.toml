@@ -129,3 +129,8 @@ reportMissingTypeStubs = false
 
 pythonVersion = "3.12" # 根环境默认用最新版本，兼容多平台特性
 
+[dependency-groups]
+dev = [
+    "marimo>=0.18.4",
+]
+
