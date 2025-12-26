@@ -40,7 +40,7 @@ secrets = { workspace = true } # mono子项目导航关键配置，需重启vsco
 [tool.uv.workspace]
 members = [
     "secrets",
-    "study/*",
+    "ui-frameworks/*",
     "temp",
 ]
 
