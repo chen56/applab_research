@@ -10,7 +10,7 @@ resolution-markers = [
 [manifest]
 members = [
     "apphub-research",
-    "research-reflex",
+    "study-reflex",
     "secrets",
     "study-gradio",
     "study-marimo",
@@ -3376,9 +3376,9 @@ wheels = [
 ]
 
 [[package]]
-name = "research-reflex"
+name = "study-reflex"
 version = "0.1.0"
-source = { virtual = "study/research-reflex" }
+source = { virtual = "study/study-reflex" }
 dependencies = [
     { name = "reflex" },
 ]
