@@ -14,8 +14,6 @@ dependencies = [
     "notebook>=7.5.1",
 ]
 
-
-
 #################################################################################
 # 可以让uv把import的包变为可编辑状态，即uv.lock： source = { editable = "planc" }
 # 类似此效果：uv pip install -e . # 确保src目录被安装为可编辑模式，让import正常工作，避免使用PYTHONPATH
