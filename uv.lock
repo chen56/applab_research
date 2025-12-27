@@ -3877,17 +3877,21 @@ name = "temp"
 version = "0.1.0"
 source = { virtual = "temp" }
 dependencies = [
+    { name = "fastapi" },
     { name = "ipykernel" },
     { name = "ipython" },
     { name = "ipywidgets" },
+    { name = "marimo" },
     { name = "notebook" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.127.1" },
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "ipython", specifier = ">=9.8.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
+    { name = "marimo", specifier = ">=0.18.4" },
     { name = "notebook", specifier = ">=7.5.1" },
 ]
 
