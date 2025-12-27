@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "hvplot>=0.12.2",
     "jupyter-bokeh>=4.0.5",
-    "marimo>=0.18.4",
+    "marimo==0.18.3",
     "matplotlib>=3.10.8",
     "numpy>=2.4.0",
     "panel>=1.8.4",
