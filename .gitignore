@@ -23,5 +23,7 @@ wheels/
 # ===============================
 # marimo
 # ===============================
-
+# pixi environments
 __marimo__
+.pixi/*
+!.pixi/config.toml

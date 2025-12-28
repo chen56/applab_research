@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2329  # 忽略 xxx 函数未被使用的警告
+
+## 开启globstar模式，允许使用**匹配所有子目录,bash4特性，默认是关闭的
+shopt -s globstar
+
+##################################################
+# 项目扩展命令集
+##################################################
+
+build() {
+  clean
+  check
+  format
+  _run uv build "$@"
+}
+
+sync() (
+  clean
+  _run uv sync
+  # uv pip install -e . # 确保src目录被安装为可编辑模式，让import正常工作，避免使用PYTHONPATH
+)
+
+
+format() {
+  # _run uv run ruff check --fix
+  # _run uv run ruff format
+  echo todo format
+}
+
+test() {
+  _run uv run pytest tests/
+}
+
+check() {
+  echo todo check
+  # _run uv run pyright --pythonplatform Darwin
+  # _run uv run pyright --pythonplatform Linux
+  # _run uv run pyright --pythonplatform Windows
+  # _run uv run ruff check
+}

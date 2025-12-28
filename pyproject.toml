@@ -11,8 +11,14 @@ urls = { "homepage" = "https://github.com/chen56/apphub" }
 
 requires-python = ">=3.12"
 dependencies = [
-    "notebook>=7.5.1",
+#    "notebook>=7.5.1",
 ]
+[dependency-groups]
+dev = [
+    #    "marimo>=0.18.4",
+    "keyring>=25.7.0",
+]
+
 
 #################################################################################
 # 可以让uv把import的包变为可编辑状态，即uv.lock： source = { editable = "planc" }
@@ -39,6 +45,7 @@ secrets = { workspace = true } # mono子项目导航关键配置，需重启vsco
 members = [
     "ui-frameworks/*",
     "temp",
+    "nvidia",
 ]
 
 [tool.uv]
@@ -126,8 +133,22 @@ reportMissingTypeStubs = false
 
 pythonVersion = "3.12" # 根环境默认用最新版本，兼容多平台特性
 
-[dependency-groups]
-dev = [
-    "marimo==0.18.3",
-]
+#################################################################################
+# pixi
+#################################################################################
 
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tool.pixi.pypi-dependencies]
+apphub-research = { path = ".", editable = true }
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = "3.12.*"
