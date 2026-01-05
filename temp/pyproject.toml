@@ -7,8 +7,11 @@ requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.127.1",
     "ipykernel>=7.1.0",
+    "ipysheet>=0.7.0",
     "ipython>=9.8.0",
     "ipywidgets>=8.1.8",
     "marimo>=0.18.4",
     "notebook>=7.5.1",
+    "pandas>=2.3.3",
+    "tabulate>=0.9.0",
 ]

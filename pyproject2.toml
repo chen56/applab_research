@@ -19,13 +19,23 @@ dev = [
     "keyring>=25.7.0",
 ]
 
+[build-system]
+requires = ["uv_build>=0.9.15,<0.10.0"]
+# uv_build默认就使用 src/ 布局，不需要额外配置
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+namespace = true
+module-name = ["applab-research"]
+module-root = "src"
+
 
 #################################################################################
 # 可以让uv把import的包变为可编辑状态，即uv.lock： source = { editable = "planc" }
 # 类似此效果：uv pip install -e . # 确保src目录被安装为可编辑模式，让import正常工作，避免使用PYTHONPATH
 #################################################################################
 [tool.uv.sources]
-secrets = { workspace = true } # mono子项目导航关键配置，需重启vscode
+cli-style-system = { workspace = true } # mono子项目导航关键配置，需重启vscode
 
 #################################################################################
 # 可选依赖（Optional Dependencies）
@@ -43,7 +53,8 @@ secrets = { workspace = true } # mono子项目导航关键配置，需重启vsco
 #################################################################################
 [tool.uv.workspace]
 members = [
-    "ui-frameworks/*",
+    "webui/*",
+#    "cli/*",
     "temp",
     "nvidia",
 ]

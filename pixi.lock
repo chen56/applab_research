@@ -57,7 +57,7 @@ packages:
 - pypi: ./
   name: apphub-research
   version: 0.0.1.dev20251209110701
-  sha256: 5b1528c983855b0cda616a973fd72747f4282956fb9216c816fb0a56a2d11d3a
+  sha256: e6fc234bf3b6db6a8ed04433ab4f908565e4b31d812457fed1a16b8397f57d1b
   requires_python: '>=3.12'
 - conda: https://conda.anaconda.org/conda-forge/osx-64/bzip2-1.0.8-h500dc9f_8.conda
   sha256: 8f50b58efb29c710f3cecf2027a8d7325ba769ab10c746eff75cea3ac050b10c

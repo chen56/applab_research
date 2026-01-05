@@ -1,27 +1,18 @@
-from typing import Annotated, Callable, Coroutine
-from fastapi.responses import HTMLResponse, RedirectResponse
-import marimo
-from fastapi import FastAPI, Form, Request, Response
+from pydantic import BaseModel
 
+class User(BaseModel):
+    # 纯类常量，不参与模型字段校验
+    DEFAULT_ROLE: str = "user"
+    MAX_AGE: int = 120
 
-# Create a marimo asgi app
-server = (
-    marimo.create_asgi_app()
-    .with_app(path="", root="./pages/index.py")
-    .with_app(path="/dashboard", root="./pages/dashboard.py")
-    .with_app(path="/sales", root="./pages/sales.py")
-)
+    # 模型的普通字段
+    name: str
+    age: int
 
-# Create a FastAPI app
-app = FastAPI()
+# 访问类常量
+print(User.DEFAULT_ROLE)  # 输出: user
+print(User.MAX_AGE)       # 输出: 120
 
-# app.add_middleware(auth_middleware)
-# app.add_route("/login", my_login_route, methods=["POST"])
-
-app.mount("/", server.build())
-
-# Run the server
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="localhost", port=8000)
+# 实例也可以访问
+user = User(name="Alice", age=25)
+print(user.DEFAULT_ROLE)  # 输出: user
