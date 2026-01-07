@@ -1,0 +1,19 @@
+[project]
+authors = [{name = "Chen Peng", email = "chen56@msn.com"}]
+dependencies = []
+name = "file_system"
+requires-python = ">= 3.12"
+version = "0.0.1"
+
+[build-system]
+requires = ["uv_build>=0.9.15,<0.10.0"]
+# uv_build默认就使用 src/ 布局，不需要额外配置
+build-backend = "uv_build"
+
+
+[tool.uv.build-backend]
+module-root = "."
+
+[tool.uv]
+# workspace 根虽然没代码，但作为聚合包
+package = false

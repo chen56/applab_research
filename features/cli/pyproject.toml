@@ -1,7 +1,7 @@
 [project]
 authors = [{name = "Chen Peng", email = "chen56@msn.com"}]
 dependencies = []
-name = "python_core"
+name = "cli"
 requires-python = ">= 3.12"
 version = "0.0.1"
 

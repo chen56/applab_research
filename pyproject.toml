@@ -14,7 +14,6 @@ requires-python = ">=3.12"
 [dependency-groups]
 dev = [
     "keyring>=25.7.0",
-    "pytest>=9.0.1",
 ]
 
 [build-system]
@@ -32,7 +31,9 @@ module-root = "."
 [tool.uv.workspace]
 # `uv workspace metadata` 看效果
 members = [
-    "python-core",
+    "features/*",
+    "features-webui/*",
+    "features-nvidia/*",
 ]
 
 [tool.uv]
