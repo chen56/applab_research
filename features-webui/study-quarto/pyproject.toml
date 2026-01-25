@@ -2,10 +2,15 @@
 authors = [{name = "Chen Peng", email = "chen56@msn.com"}]
 dependencies = [
     "deepdiff>=8.6.1",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.8",
+    "plotly>=6.5.1",
     "pydantic>=2.12.5",
-    "pytest-check>=2.6.2",
+    "quarto>=0.1.0",
+    "rich>=14.2.0",
+    "shiny>=1.5.1",
 ]
-name = "validation"
+name = "study-quarto"
 requires-python = ">= 3.12"
 version = "0.0.1"
 

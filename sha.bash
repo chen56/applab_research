@@ -32,7 +32,10 @@ sync() (
   # uv pip install -e . # 确保src目录被安装为可编辑模式，让import正常工作，避免使用PYTHONPATH
 )
 
+gemini() {
+  GOOGLE_CLOUD_PROJECT=$(gcloud config get-value project) gemini
 
+}
 
 ##########################################
 # app 入口

@@ -31,6 +31,7 @@ module-root = "."
 [tool.uv.workspace]
 # `uv workspace metadata` 看效果
 members = [
+    "temp",
     "features/*",
     "features-webui/*",
     "features-nvidia/*",

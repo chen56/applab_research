@@ -9,12 +9,15 @@ Layer model (CLI-optimized):
 Authoritative rule:
 - Only `error` is a semantic color
 - success / warning / info are UX semantics mapped to roles
+
+log ref:
+- <https://uptrace.dev/get/opentelemetry-python/logs>
 """
 
 from typing import Dict, Literal
-from rich.console import Console
-from rich.theme import Theme
-from rich.style import Style
+from rich_.console import Console
+from rich_.theme import Theme
+from rich_.style import Style
 
 
 # ----------------------------------------------------------------------
