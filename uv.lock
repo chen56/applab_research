@@ -4131,7 +4131,7 @@ requires-dist = [{ name = "pywebio", specifier = ">=1.8.4" }]
 [[package]]
 name = "study-quarto"
 version = "0.0.1"
-source = { virtual = "features-webui/study-quarto" }
+source = { editable = "features-webui/study-quarto" }
 dependencies = [
     { name = "deepdiff" },
     { name = "jupyter" },

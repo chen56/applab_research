@@ -25,4 +25,5 @@ module-root = "."
 
 [tool.uv]
 # workspace 根虽然没代码，但作为聚合包
-package = false
+package = true
+
